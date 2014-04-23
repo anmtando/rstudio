@@ -18,17 +18,20 @@ sudo apt-key adv --keyserver keys.gnupg.net --recv-key 381BA480
 # install R
 sudo apt-get install r-base r-base-dev
 
-apt-get install libopenblas-base 
+
 
 # install RStudio
 sudo apt-get update
 sudo apt-get install libjpeg62
 URL='http://download1.rstudio.org/rstudio-0.98.501-amd64.deb'; FILE=`mktemp`; wget "$URL" -qO $FILE && sudo dpkg -i $FILE; rm $FILE
 # from http://askubuntu.com/a/51859/119774
+# plus a few dependancies
+sudo apt-get install libcurl4-gnutls-dev
+sudo apt-get install libopenblas-base 
 
 # To run RStudio, simply type in the terminal
 sudo rstudio
 
 # then in RStudio console
 update.packages(checkBuilt = TRUE, ask = FALSE)
-install.packages('codetools, 'Rcpp')
+install.packages('codetools, 'devtools') # and so on
