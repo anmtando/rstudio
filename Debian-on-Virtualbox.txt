@@ -24,7 +24,7 @@ sudo apt-key adv --keyserver keys.gnupg.net --recv-key 381BA480
 sudo apt-get install r-base r-base-dev r-cran-xml 
 
 # install RStudio from the web
-# use dauily build to get rmarkdown
+# use daily build to get rmarkdown & latest goodies
 sudo apt-get update && sudo apt-get install 
 URL='https://s3.amazonaws.com/rstudio-dailybuilds/rstudio-0.98.797-amd64.deb'; FILE=`mktemp`; wget "$URL" -qO $FILE && sudo dpkg -i $FILE; rm $FILE
 # from http://askubuntu.com/a/51859/119774
