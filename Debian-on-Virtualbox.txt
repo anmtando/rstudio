@@ -9,9 +9,9 @@ Applications -> accessories -> terminal
 
 Make self su: http://stackoverflow.com/a/15067345/1036500
 
-# install a few dependancies for our workflow
+# install a few dependancies for our workflow a
 sudo apt-get update && sudo apt-get install
-sudo apt-get install libcurl4-gnutls-dev libopenblas-base make gcc git-core texlive biblatex pandoc
+sudo apt-get install libcurl4-gnutls-dev libopenblas-base libxml2-dev make gcc git-core texlive biblatex pandoc libjpeg62
 
 # install R: http://cran.r-project.org/bin/linux/debian/
 
@@ -21,12 +21,12 @@ sudo gedit /etc/apt/sources.list
 # get keys
 sudo apt-key adv --keyserver keys.gnupg.net --recv-key 381BA480
 # install R
-sudo apt-get install r-base r-base-dev
+sudo apt-get install r-base r-base-dev r-cran-xml 
 
 # install RStudio from the web
-sudo apt-get update
-sudo apt-get install libjpeg62
-URL='http://download1.rstudio.org/rstudio-0.98.501-amd64.deb'; FILE=`mktemp`; wget "$URL" -qO $FILE && sudo dpkg -i $FILE; rm $FILE
+# use dauily build to get rmarkdown
+sudo apt-get update && sudo apt-get install 
+URL='https://s3.amazonaws.com/rstudio-dailybuilds/rstudio-0.98.797-amd64.deb'; FILE=`mktemp`; wget "$URL" -qO $FILE && sudo dpkg -i $FILE; rm $FILE
 # from http://askubuntu.com/a/51859/119774
 
 # To run RStudio, simply type in the terminal
@@ -34,7 +34,19 @@ sudo rstudio
 
 # then in RStudio console
 update.packages(checkBuilt = TRUE, ask = FALSE)
-install.packages('codetools, 'Rcpp', 'devtools') # and so on
+# check to see if packages are installed. 
+# Install them if they are not, then load them into the R session.
+ ipak <- function(pkg){
+    new.pkg <- pkg[!(pkg %in% installed.packages()[, "Package"])]
+    if (length(new.pkg)) 
+        install.packages(new.pkg, dependencies = TRUE)
+    sapply(pkg, require, character.only = TRUE)
+}
+ 
+# usage
+packages <- c('codetools', 'Rcpp', 'devtools', 'knitr', 'rmarkdown') # and so on
+ipak(packages)
+
 
 # to share virualbox with others
 file -> export appliance
