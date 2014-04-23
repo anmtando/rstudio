@@ -1,0 +1,21 @@
+# first get:
+Oracle VM VirtualBox
+
+Debian netinstall
+
+Once VM is running:
+
+Applications -> accessories -> terminal
+
+Make self su: http://stackoverflow.com/a/15067345/1036500
+
+# install R
+sudo apt-get update && sudo apt-get install
+sudo apt-get install r-base
+
+# install RStudio
+sudo apt-get install libjpeg62
+URL='http://download1.rstudio.org/rstudio-0.98.501-amd64.deb'; FILE=`mktemp`; wget "$URL" -qO $FILE && sudo dpkg -i $FILE; rm $FILE
+# from http://askubuntu.com/a/51859/119774
+
+# 
