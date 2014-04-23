@@ -27,4 +27,8 @@ URL='http://download1.rstudio.org/rstudio-0.98.501-amd64.deb'; FILE=`mktemp`; wg
 # from http://askubuntu.com/a/51859/119774
 
 # To run RStudio, simply type in the terminal
-rstudio
+sudo rstudio
+
+# then in RStudio console
+update.packages(checkBuilt = TRUE, ask = FALSE)
+install.packages('codetools, 'Rcpp')
