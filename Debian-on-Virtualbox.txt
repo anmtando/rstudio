@@ -37,3 +37,6 @@ sudo rstudio
 # then in RStudio console
 update.packages(checkBuilt = TRUE, ask = FALSE)
 install.packages('codetools, 'devtools') # and so on
+
+# to share in virualbox
+file -> export appliance
