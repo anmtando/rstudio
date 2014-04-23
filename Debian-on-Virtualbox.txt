@@ -9,13 +9,15 @@ Applications -> accessories -> terminal
 
 Make self su: http://stackoverflow.com/a/15067345/1036500
 
-# install a few dependancies to make R work
-sudo apt-get install libcurl4-gnutls-dev libopenblas-base 
+# install a few dependancies for our workflow
+sudo apt-get update && sudo apt-get install
+sudo apt-get install libcurl4-gnutls-dev libopenblas-base make gcc git-core texlive biblatex pandoc
 
 # install R: http://cran.r-project.org/bin/linux/debian/
-sudo apt-get update && sudo apt-get install
+
 # edit  /etc/apt/sources.list to add deb http://cran.rstudio.com/bin/linux/debian wheezy-cran3/
 sudo gedit /etc/apt/sources.list
+# now paste in deb http://cran.rstudio.com/bin/linux/debian wheezy-cran3/ and save
 # get keys
 sudo apt-key adv --keyserver keys.gnupg.net --recv-key 381BA480
 # install R
@@ -27,16 +29,15 @@ sudo apt-get install libjpeg62
 URL='http://download1.rstudio.org/rstudio-0.98.501-amd64.deb'; FILE=`mktemp`; wget "$URL" -qO $FILE && sudo dpkg -i $FILE; rm $FILE
 # from http://askubuntu.com/a/51859/119774
 
-# install latex, pandoc to help with reprodicibility 
-sudo apt-get install texlive
-sudo apt-get install pandoc
-
 # To run RStudio, simply type in the terminal
 sudo rstudio
 
 # then in RStudio console
 update.packages(checkBuilt = TRUE, ask = FALSE)
-install.packages('codetools, 'devtools') # and so on
+install.packages('codetools, 'Rcpp', 'devtools') # and so on
 
-# to share in virualbox
+# to share virualbox with others
 file -> export appliance
+
+# to swap files between host OS and guest OS: https://www.virtualbox.org/manual/ch04.html
+# and don't forget to add self to share folder: https://www.virtualbox.org/ticket/7951
