@@ -44,7 +44,7 @@ update.packages(checkBuilt = TRUE, ask = FALSE)
 }
  
 # usage
-packages <- c('codetools', 'Rcpp', 'devtools', 'knitr', 'rmarkdown') # and so on
+packages <- c('codetools', 'Rcpp', 'devtools', 'knitr') # and so on
 ipak(packages)
 
 
