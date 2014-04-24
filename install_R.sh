@@ -4,6 +4,7 @@
 # step through
 set -x
 
+# Make self su: http://stackoverflow.com/a/15067345/1036500
 # install sudo
 aptitude install sudo
 # su root

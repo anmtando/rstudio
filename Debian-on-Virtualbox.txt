@@ -2,35 +2,13 @@
 Oracle VM VirtualBox (and install)
 # start VirtualBox and mount Debian netinstall iso
 # Make new VM, follow prompts, use Debian graphic installer
+# many fields can be left blank, try them and see
 
 # Once VM has finished installing and is running:
 
 Applications -> accessories -> terminal
 
-Make self su: http://stackoverflow.com/a/15067345/1036500
-
-# install a few dependancies for our workflow a
-sudo apt-get update && sudo apt-get install
-sudo apt-get install libcurl4-gnutls-dev libopenblas-base libxml2-dev make gcc git-core texlive biblatex pandoc libjpeg62
-
-# install R: http://cran.r-project.org/bin/linux/debian/
-
-# edit  /etc/apt/sources.list to add deb http://cran.rstudio.com/bin/linux/debian wheezy-cran3/
-sudo gedit /etc/apt/sources.list
-# now paste in deb http://cran.rstudio.com/bin/linux/debian wheezy-cran3/ and save
-# get keys
-sudo apt-key adv --keyserver keys.gnupg.net --recv-key 381BA480
-# install R
-sudo apt-get install r-base r-base-dev r-cran-xml 
-
-# install RStudio from the web
-# use daily build to get rmarkdown & latest goodies
-sudo apt-get update && sudo apt-get install 
-URL='https://s3.amazonaws.com/rstudio-dailybuilds/rstudio-0.98.797-amd64.deb'; FILE=`mktemp`; wget "$URL" -qO $FILE && sudo dpkg -i $FILE; rm $FILE
-# from http://askubuntu.com/a/51859/119774
-
-# To run RStudio, simply type in the terminal
-sudo rstudio
+# see shell script below for getting thigns installed...
 
 # then in RStudio console
 update.packages(checkBuilt = TRUE, ask = FALSE)
