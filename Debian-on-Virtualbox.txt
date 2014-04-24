@@ -1,9 +1,9 @@
-# first get:
-Oracle VM VirtualBox
+# first download:
+Oracle VM VirtualBox (and install)
+# start VirtualBox and mount Debian netinstall iso
+# Make new VM, follow prompts, use Debian graphic installer
 
-Debian netinstall
-
-Once VM is running:
+# Once VM has finished installing and is running:
 
 Applications -> accessories -> terminal
 
@@ -53,3 +53,7 @@ file -> export appliance
 
 # to swap files between host OS and guest OS: https://www.virtualbox.org/manual/ch04.html
 # and don't forget to add self to share folder: https://www.virtualbox.org/ticket/7951
+
+# getting in and out of su: 
+# in:  su -
+# out: su ben
