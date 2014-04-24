@@ -3,6 +3,7 @@
 # this script can be run from the terminal with bash install_R.sh
 # step through
 set -x
+trap read debug
 
 # Make self su: http://stackoverflow.com/a/15067345/1036500
 # install sudo
