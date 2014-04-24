@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# this script can be run from the terminal with ./install_R.sh
+# this script can be run from the terminal with bash install_R.sh
 # step through
 set -x
 
