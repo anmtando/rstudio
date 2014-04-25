@@ -10,7 +10,7 @@
 # trap read debug
  
 # Make self su: http://stackoverflow.com/a/15067345/1036500
-# install sudo
+# install sudo to ensure we get access to everything
 su -c "aptitude install sudo"
 # su root
 sudo adduser ben sudo
@@ -30,11 +30,13 @@ sudo apt-get install r-base r-base-dev r-cran-xml
  
 echo "install RStudio from the web"
 # use daily build to get rmarkdown & latest goodies
+# do update the URL from time to time to make sure it's fresh
 sudo apt-get update && sudo apt-get install 
 URL='https://s3.amazonaws.com/rstudio-dailybuilds/rstudio-0.98.797-amd64.deb'; FILE=`mktemp`; sudo wget "$URL" -qO $FILE && sudo dpkg -i $FILE; rm $FILE
  
 echo "start R and install commonly used packages"
 # http://stackoverflow.com/q/4090169/1036500
+# Make an R script file to use in a moment...
 LOADSTUFF="options(repos=structure(c(CRAN='http://cran.rstudio.com/')))
 update.packages(checkBuilt = TRUE, ask = FALSE)
 # check to see if packages are installed. 
@@ -47,18 +49,26 @@ update.packages(checkBuilt = TRUE, ask = FALSE)
 }
  
 # usage
-packages <- c('codetools', 'Rcpp', 'devtools', 'knitr', 'ggplot2', 'data.table', 'dplyr', 'plyr', 'reshape2', 'XML', 'RCurl') # and so on
+packages <- c('codetools', 'Rcpp', 'devtools', 'knitr', 'ggplot2', 'data.table', 'dplyr', 'plyr', 'reshape2', 'XML', 'RCurl') 
+# just some of my most often used ones
 ipak(packages)"
 
+# put that R code into an R script file
 FILENAME1="loadstuff.r"
 sudo echo "$LOADSTUFF" > /tmp/$FILENAME1
 
+# Make a shell file that contains instructions in bash for running that R script file
+# from the command line. There may be a simpler way, but nothing I tried worked.
 NEWBASH='#!/usr/bin/env 
 sudo Rscript /tmp/loadstuff.r'
 FILENAME2="loadstuff.sh"
+
+# put that bash code into a shell script file
 sudo echo "$NEWBASH" > /tmp/$FILENAME2
+
+# run the bash file to exectute the R code and install the packages
 sh /tmp/loadstuff.sh
  
- 
+# done.
 echo "all done"
 echo "type 'sudo rstudio' in the terminal to start RStudio"
