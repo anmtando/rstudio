@@ -46,7 +46,7 @@ update.packages(checkBuilt = TRUE, ask = FALSE)
 }
  
 # usage
-packages <- c('codetools', 'Rcpp', 'devtools', 'knitr', 'ggplot', 'data.table', 'dplyr', 'plyr', 'reshape2', 'XML', 'RCurl') # and so on
+packages <- c('codetools', 'Rcpp', 'devtools', 'knitr', 'ggplot2', 'data.table', 'dplyr', 'plyr', 'reshape2', 'XML', 'RCurl') # and so on
 ipak(packages)"
 
 FILENAME1="loadstuff.r"
