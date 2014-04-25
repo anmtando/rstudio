@@ -34,6 +34,7 @@ sudo apt-get update && sudo apt-get install
 URL='https://s3.amazonaws.com/rstudio-dailybuilds/rstudio-0.98.797-amd64.deb'; FILE=`mktemp`; sudo wget "$URL" -qO $FILE && sudo dpkg -i $FILE; rm $FILE
  
 echo "start R and install commonly used packages"
+# http://stackoverflow.com/q/4090169/1036500
 LOADSTUFF="options(repos=structure(c(CRAN='http://cran.rstudio.com/')))
 update.packages(checkBuilt = TRUE, ask = FALSE)
 # check to see if packages are installed. 
