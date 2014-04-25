@@ -4,11 +4,11 @@ Oracle VM VirtualBox (and install)
 # Make new VM, follow prompts, use Debian graphic installer
 # many fields can be left blank, try them and see
 
-# Once VM has finished installing and is running:
+# Once VM has finished installing and Debain is running:
 
 Applications -> accessories -> terminal
 
-# see shell script below for getting thigns installed...
+# see shell script below for getting R & RSutdio installed...
 
 # then in RStudio console
 update.packages(checkBuilt = TRUE, ask = FALSE)
