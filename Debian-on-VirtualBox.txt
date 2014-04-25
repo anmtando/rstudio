@@ -1,16 +1,28 @@
 # first download:
-Oracle VM VirtualBox (and install)
+# Debian internet-installer image file: http://www.debian.org/distrib/netinst
+# Oracle VM VirtualBox (and install): https://www.virtualbox.org/wiki/Downloads
+
 # start VirtualBox and mount Debian netinstall iso
 # Make new VM, follow prompts, use Debian graphic installer
 # many fields can be left blank, try them and see
+# There are many useful guides for this... 
+# Mac: http://williamjturkel.net/2013/05/31/installing-debian-linux-in-a-vm/ http://www.brianlinkletter.com/installing-debian-linux-in-a-virtualbox-virtual-machine/
+# Windows: https://jtreminio.com/2012/07/setting-up-a-debian-vm-step-by-step/
 
-# Once VM has finished installing and Debain is running:
+# Once VM has finished installing and Debain is up and running on your screen, in Debian do:
 
 Applications -> accessories -> terminal
 
-# see shell script below for getting R & RSutdio installed...
+# see shell script below for getting R & RSutdio installed, read through it before running to 
+# know what to expect, then copy-paste the shell script below into gedit on your Debian VM, 
+# save locally on your Debian VM, then run the shell script from the terminal by 
+# typing the next line in the terminal (minus the #):
+# bash install_R.sh
 
-# to share virualbox with others
+
+# Other things we want to do with a VM:
+
+# to share the entire Debian VM with others
 file -> export appliance
 
 # to swap files between host OS and guest OS: https://www.virtualbox.org/manual/ch04.html
@@ -18,4 +30,4 @@ file -> export appliance
 
 # getting in and out of su: 
 # in:  su -
-# out: su ben
+# out: su yourusername
