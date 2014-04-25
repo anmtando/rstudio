@@ -1,9 +1,11 @@
 #!/bin/bash
  
-# this script can be run from the terminal with bash install_R.sh
+# this script can be run from the terminal with the next line (minus the #)
+# bash install_R.sh
 
+# you will need to enter your password at a few points, so keep an eye on it.
 
-# step through
+# in case we need to step through:
 # set -x
 # trap read debug
  
