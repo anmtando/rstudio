@@ -17,7 +17,7 @@ sudo adduser ben sudo
  
 echo "install a few dependancies for our workflow"
 sudo apt-get update && sudo apt-get install
-sudo apt-get install libcurl4-gnutls-dev libopenblas-base libxml2-dev make gcc git-core texlive biblatex pandoc libjpeg62 unzip curl
+sudo apt-get install libcurl4-gnutls-dev libopenblas-base libxml2-dev make gcc git-core texlive biblatex pandoc libjpeg62 unzip curl littler
  
 echo "edit the sources file to prepare to install R"
 sudo sh -c 'echo "deb http://cran.rstudio.com/bin/linux/debian wheezy-cran3/" >> /etc/apt/sources.list'
