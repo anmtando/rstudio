@@ -33,5 +33,31 @@ echo "install RStudio from the web"
 sudo apt-get update && sudo apt-get install 
 URL='https://s3.amazonaws.com/rstudio-dailybuilds/rstudio-0.98.797-amd64.deb'; FILE=`mktemp`; sudo wget "$URL" -qO $FILE && sudo dpkg -i $FILE; rm $FILE
  
+echo "start R and install commonly used packages"
+LOADSTUFF="options(repos=structure(c(CRAN='http://cran.rstudio.com/')))
+update.packages(checkBuilt = TRUE, ask = FALSE)
+# check to see if packages are installed. 
+# Install them if they are not, then load them into the R session.
+ ipak <- function(pkg){
+    new.pkg <- pkg[!(pkg %in% names(installed.packages()[,3]))]
+    if (length(new.pkg)) 
+        install.packages(new.pkg, dependencies = TRUE)
+    sapply(pkg, require, character.only = TRUE)
+}
+ 
+# usage
+packages <- c('codetools', 'Rcpp', 'devtools', 'knitr', 'ggplot', 'data.table', 'dplyr', 'plyr', 'reshape2', 'XML', 'RCurl') # and so on
+ipak(packages)"
+
+FILENAME1="loadstuff.r"
+sudo echo "$LOADSTUFF" > /tmp/$FILENAME1
+
+NEWBASH='#!/usr/bin/env 
+sudo Rscript /tmp/loadstuff.r'
+FILENAME2="loadstuff.sh"
+sudo echo "$NEWBASH" > /tmp/$FILENAME2
+sh /tmp/loadstuff.sh
+ 
+ 
 echo "all done"
 echo "type 'sudo rstudio' in the terminal to start RStudio"
