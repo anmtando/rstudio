@@ -10,22 +10,6 @@ Applications -> accessories -> terminal
 
 # see shell script below for getting R & RSutdio installed...
 
-# then in RStudio console
-update.packages(checkBuilt = TRUE, ask = FALSE)
-# check to see if packages are installed. 
-# Install them if they are not, then load them into the R session.
- ipak <- function(pkg){
-    new.pkg <- pkg[!(pkg %in% installed.packages()[, "Package"])]
-    if (length(new.pkg)) 
-        install.packages(new.pkg, dependencies = TRUE)
-    sapply(pkg, require, character.only = TRUE)
-}
- 
-# usage
-packages <- c('codetools', 'Rcpp', 'devtools', 'knitr') # and so on
-ipak(packages)
-
-
 # to share virualbox with others
 file -> export appliance
 
