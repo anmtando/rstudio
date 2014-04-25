@@ -4,8 +4,9 @@
 
 # start VirtualBox and mount Debian netinstall iso
 # Make new VM, follow prompts, use Debian graphic installer
-# many fields can be left blank, try them and see
-# There are many useful guides for this... 
+# many fields can be left blank, try them and see, but DO be sure to select “Debian desktop environment”
+# There are many useful guides for this (stop following when you get to the desktop, don't run any of the code in these how-tos)
+# Here's a selection of how-tos (you might also search youtube)
 # Mac: http://williamjturkel.net/2013/05/31/installing-debian-linux-in-a-vm/ http://www.brianlinkletter.com/installing-debian-linux-in-a-virtualbox-virtual-machine/
 # Windows: https://jtreminio.com/2012/07/setting-up-a-debian-vm-step-by-step/
 
