@@ -13,6 +13,7 @@
 # install sudo to ensure we get access to everything
 su -c "aptitude install sudo"
 # su root
+# Here we assume your username is ben... do edit this line if you chose a different username!
 sudo adduser ben sudo
  
 echo "install a few dependancies for our workflow"
