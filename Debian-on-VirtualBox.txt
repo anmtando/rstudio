@@ -35,4 +35,4 @@ file -> export appliance
 
 # To do:
 
-# add right-click or keyboard shortcut to 'open terminal'  
+# add right-click or keyboard shortcut to 'open terminal'  cf. http://askubuntu.com/a/207448/119774 http://www.cyberciti.biz/faq/linux-gnome-open-terminal-shell-prompt-here/
