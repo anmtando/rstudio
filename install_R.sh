@@ -18,8 +18,8 @@ sudo adduser marwick sudo
  
 echo "install a few dependancies for our workflow"
 sudo apt-get update && sudo apt-get install
-sudo apt-get install libcurl4-gnutls-dev libopenblas-base libxml2-dev make gcc git-core texlive biblatex pandoc libjpeg62 unzip curl littler r-cran-rjava
- 
+sudo apt-get install libcurl4-gnutls-dev libopenblas-base libxml2-dev make gcc git-core texlive biblatex pandoc libjpeg62 unzip curl littler openjdk-7-*
+
 echo "edit the sources file to prepare to install R"
 sudo sh -c 'echo "deb http://cran.rstudio.com/bin/linux/debian wheezy-cran3/" >> /etc/apt/sources.list'
  
@@ -27,7 +27,8 @@ echo "get keys to install R"
 sudo apt-key adv --keyserver keys.gnupg.net --recv-key 381BA480
  
 echo "install R and some helpers"
-sudo apt-get install r-base r-base-dev r-cran-xml 
+sudo apt-get install r-base r-base-dev r-cran-xml  r-cran-rjava
+sudo R CMD javareconf # for rJava
  
 echo "install RStudio from the web"
 # use daily build to get rmarkdown & latest goodies
