@@ -1,4 +1,6 @@
 #!/bin/bash
+
+# Marwick Lab Computational Environment Setup
  
 # this script can be run from the terminal with the next line (minus the #)
 # bash install_R.sh
