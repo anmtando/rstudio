@@ -20,8 +20,9 @@
 # sudo adduser ben sudo
  
 echo "install a few dependancies for our workflow"
-sudo apt-get update && sudo apt-get install -y
-sudo apt-get install libcurl4-gnutls-dev libopenblas-base libxml2-dev make gcc git-core texlive biblatex pandoc libjpeg62 unzip curl littler openjdk-7-* xorg openbox xauth -y
+sudo apt-get update && sudo apt-get upgrade && sudo apt-get install
+sudo apt-get -f install -y
+sudo apt-get install libcurl4-gnutls-dev libopenblas-base libxml2-dev make gcc git-core texlive biblatex pandoc libjpeg62 unzip curl littler openjdk-7-*
 
 # also a few things in case we use python 
 # from http://faculty.washington.edu/rjl/uwhpsc-coursera/vm.html
