@@ -26,7 +26,7 @@ sudo apt-get install libcurl4-gnutls-dev libopenblas-base libxml2-dev make gcc g
 
 # also a few things in case we use python 
 # from http://faculty.washington.edu/rjl/uwhpsc-coursera/vm.html
-sudo apt-get install  jockey-gtk xdm ipython python-numpy python-scipy python-matplotlib python-dev python-sphinx gfortran openmpi-bin liblapack-dev thunar xfce4-terminal gedit gitk xxdiff imagemagick python-setuptools -y
+sudo apt-get install  jockey-gtk xdm ipython python-numpy python-scipy python-matplotlib python-dev python-sphinx gfortran openmpi-bin liblapack-dev thunar xfce4-terminal gedit gitk docdiff imagemagick python-setuptools -y
 
 echo "edit the sources file to prepare to install R"
 sudo sh -c 'echo "deb http://cran.rstudio.com/bin/linux/debian wheezy-cran3/" >> /etc/apt/sources.list'
