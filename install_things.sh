@@ -26,7 +26,9 @@ sudo apt-get install libcurl4-gnutls-dev libopenblas-base libxml2-dev make gcc g
 
 # also a few things in case we use python 
 # from http://faculty.washington.edu/rjl/uwhpsc-coursera/vm.html
-sudo apt-get install jockey-gtk xdm ipython ipython-notebook python-pandas python-numpy python-scipy python-matplotlib python-dev python-sphinx gfortran openmpi-bin liblapack-dev thunar xfce4-terminal gedit gitk docdiff imagemagick python-setuptools -y
+sudo apt-get install  jockey-gtk xdm liblzma-dev ipython ipython-notebook python-pandas python-numpy python-scipy python-matplotlib python-dev python-sphinx gfortran openmpi-bin liblapack-dev thunar xfce4-terminal gedit gitk docdiff imagemagick python-setuptools -y
+sudo easy_install ryp2
+# now we can sudo ipython notebook & use R within: http://nbviewer.ipython.org/github/ipython/ipython/blob/3607712653c66d63e0d7f13f073bde8c0f209ba8/docs/examples/notebooks/rmagic_extension.ipynb#Rmagic-Functions-Extension
 
 echo "edit the sources file to prepare to install R"
 sudo sh -c 'echo "deb http://cran.rstudio.com/bin/linux/debian wheezy-cran3/" >> /etc/apt/sources.list'
