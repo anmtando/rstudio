@@ -1,5 +1,10 @@
 # first download:
 # Debian internet-installer image file: http://www.debian.org/distrib/netinst
+# or
+# looking for something smaller and using less memory
+# using the 64-bit desktop cd from http://lubuntu.net/
+
+# then
 # Oracle VM VirtualBox (and install): https://www.virtualbox.org/wiki/Downloads
 
 # start VirtualBox and mount Debian netinstall iso
@@ -9,6 +14,11 @@
 # Here's a selection of how-tos (you might also search youtube)
 # Mac: http://williamjturkel.net/2013/05/31/installing-debian-linux-in-a-vm/ http://www.brianlinkletter.com/installing-debian-linux-in-a-virtualbox-virtual-machine/
 # Windows: https://jtreminio.com/2012/07/setting-up-a-debian-vm-step-by-step/
+
+# install guest additions to allow for copy and pasting between VM and host
+# http://askubuntu.com/questions/22743/how-do-i-install-guest-additions-in-a-virtualbox-vm
+# first do sudo apt-get update, sudo apt-get install make gcc
+# I used sudo ./VBoxLinuxAdditions.run then sudo reboot
 
 # Once VM has finished installing and Debain is up and running on your screen, in Debian do:
 
@@ -24,6 +34,7 @@ Applications -> accessories -> terminal
 # Other things we want to do with a VM:
 
 # to share the entire Debian VM with others
+# http://superuser.com/questions/235376/how-to-share-a-virtualbox-image
 file -> export appliance
 
 # to swap files between host OS and guest OS: https://www.virtualbox.org/manual/ch04.html

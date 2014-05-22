@@ -3,7 +3,7 @@
 # Marwick Lab Computational Environment Setup
  
 # this script can be run from the terminal with the next line (minus the #)
-# bash install_R.sh
+# bash install_things.sh
 
 # you will need to enter your password at a few points, so keep an eye on it while it runs.
 
@@ -11,16 +11,21 @@
 # set -x
 # trap read debug
  
-# Make self su: http://stackoverflow.com/a/15067345/1036500
+## Need this for Debian but not Lubuntu 
+## Make self su: http://stackoverflow.com/a/15067345/1036500
 # install sudo to ensure we get access to everything
-su -c "aptitude install sudo"
+# su -c "aptitude install sudo"
 # su root
-# Here we assume your username is marwick... do edit this line if you chose a different username!
-sudo adduser marwick sudo
+## Here we assume your username is ben ... do edit this line if you chose a different username!
+# sudo adduser ben sudo
  
 echo "install a few dependancies for our workflow"
-sudo apt-get update && sudo apt-get install
-sudo apt-get install libcurl4-gnutls-dev libopenblas-base libxml2-dev make gcc git-core texlive biblatex pandoc libjpeg62 unzip curl littler openjdk-7-*
+sudo apt-get update && sudo apt-get install -y
+sudo apt-get install libcurl4-gnutls-dev libopenblas-base libxml2-dev make gcc git-core texlive biblatex pandoc libjpeg62 unzip curl littler openjdk-7-* xorg openbox xauth -y
+
+# also a few things in case we use python 
+# from http://faculty.washington.edu/rjl/uwhpsc-coursera/vm.html
+sudo apt-get install  jockey-gtk xdm ipython python-numpy python-scipy python-matplotlib python-dev python-sphinx gfortran openmpi-bin liblapack-dev thunar xfce4-terminal gedit gitk xxdiff imagemagick python-setuptools -y
 
 echo "edit the sources file to prepare to install R"
 sudo sh -c 'echo "deb http://cran.rstudio.com/bin/linux/debian wheezy-cran3/" >> /etc/apt/sources.list'
@@ -29,7 +34,7 @@ echo "get keys to install R"
 sudo apt-key adv --keyserver keys.gnupg.net --recv-key 381BA480
  
 echo "install R and some helpers"
-sudo apt-get install r-base r-base-dev r-cran-xml  r-cran-rjava
+sudo apt-get install r-base r-base-dev r-cran-xml  r-cran-rjava -y
 sudo R CMD javareconf # for rJava
  
 echo "install RStudio from the web"
