@@ -39,6 +39,8 @@ sudo apt-get install littler -y
 sudo apt-get install openjdk-7-* -y
 sudo apt-get install gedit -y
 sudo apt-get install mysql-server -y
+sudo apt-get install libcurl4-gnutls-dev -y
+
 
 # also a few things in case we use python 
 # from http://faculty.washington.edu/rjl/uwhpsc-coursera/vm.html
