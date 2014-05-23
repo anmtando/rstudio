@@ -20,15 +20,44 @@
 # sudo adduser ben sudo
  
 echo "install a few dependancies for our workflow"
-sudo apt-get update
-# sudo apt-get upgrade # skip to speed things up
-sudo apt-get install
+sudo apt-get update  -y
+# sudo apt-get upgrade  -y
+sudo apt-get install -y
 # sudo apt-get -f install -y
-sudo apt-get install libcurl4-gnutls-dev libopenblas-base libxml2-dev make gcc git texlive-core pandoc libjpeg62 unzip curl littler openjdk-7-* -y
+sudo apt-get install libcurl4-gnutls-dev -y
+sudo apt-get install libopenblas-base -y
+sudo apt-get install libxml2-dev -y
+sudo apt-get install make -y
+sudo apt-get install gcc -y
+sudo apt-get install git -y
+sudo apt-get install texlive-core -y
+sudo apt-get install pandoc -y
+sudo apt-get install libjpeg62 -y
+sudo apt-get install unzip -y
+sudo apt-get install curl -y
+sudo apt-get install littler -y
+sudo apt-get install openjdk-7-* -y
+sudo apt-get install gedit -y
 
 # also a few things in case we use python 
 # from http://faculty.washington.edu/rjl/uwhpsc-coursera/vm.html
-sudo apt-get install liblzma-dev ipython ipython-notebook python-pandas python-numpy python-scipy python-matplotlib python-dev python-sphinx gfortran openmpi-bin liblapack-dev thunar xfce4-terminal gedit gitk docdiff imagemagick python-setuptools -y
+sudo apt-get install liblzma-dev -y
+sudo apt-get install ipython -y
+sudo apt-get install ipython-notebook -y 
+sudo apt-get install python-pandas -y
+sudo apt-get install python-numpy -y
+sudo apt-get install python-scipy -y
+sudo apt-get install python-matplotlib -y
+sudo apt-get install python-dev -y
+sudo apt-get install python-sphinx -y
+sudo apt-get install gfortran -y
+sudo apt-get install openmpi-bin -y
+sudo apt-get install liblapack-dev -y
+sudo apt-get install thunar -y
+sudo apt-get install gitk -y
+sudo apt-get install docdiff -y
+sudo apt-get install imagemagick -y
+sudo apt-get install python-setuptools -y
 
 echo "edit the sources file to prepare to install R"
 # see http://cran.r-project.org/bin/linux/ubuntu/README
@@ -42,10 +71,13 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9 # if Lubu
  
 echo "install R and some helpers"
 sudo apt-get update
-sudo apt-get install r-base r-base-dev r-cran-xml  r-cran-rjava -y
+sudo apt-get install r-base  -y
+sudo apt-get install r-base-dev -y
+sudo apt-get install r-cran-xml  -y
+sudo apt-get install r-cran-rjava -y
 sudo R CMD javareconf # for rJava
 sudo easy_install rpy2 # now we can sudo ipython notebook & use R within: http://nbviewer.ipython.org/github/ipython/ipython/blob/3607712653c66d63e0d7f13f073bde8c0f209ba8/docs/examples/notebooks/rmagic_extension.ipynb#Rmagic-Functions-Extension
-
+ 
 echo "install RStudio from the web"
 # use daily build to get rmarkdown & latest goodies
 # do update the URL from time to time to make sure it's fresh
