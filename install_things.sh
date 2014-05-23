@@ -31,12 +31,17 @@ sudo easy_install ryp2 # jockey-gtk xdm
 # now we can sudo ipython notebook & use R within: http://nbviewer.ipython.org/github/ipython/ipython/blob/3607712653c66d63e0d7f13f073bde8c0f209ba8/docs/examples/notebooks/rmagic_extension.ipynb#Rmagic-Functions-Extension
 
 echo "edit the sources file to prepare to install R"
-sudo sh -c 'echo "deb http://cran.rstudio.com/bin/linux/debian wheezy-cran3/" >> /etc/apt/sources.list'
- 
+# see http://cran.r-project.org/bin/linux/ubuntu/README
+# sudo sh -c 'echo "deb http://cran.rstudio.com/bin/linux/debian wheezy-cran3/" >> /etc/apt/sources.list' # if Debian
+sudo sh -c 'echo "deb http://cran.rstudio.com/bin/linux/ubuntu trusty/" >> /etc/apt/sources.list' # if Lubuntu
+sudo sh -c 'echo "deb http://cran.rstudio.com/ raring-backports main restricted universe" >> /etc/apt/sources.list' # if Lubuntu
+
 echo "get keys to install R"
-sudo apt-key adv --keyserver keys.gnupg.net --recv-key 381BA480
+# sudo apt-key adv --keyserver keys.gnupg.net --recv-key 381BA480 # if Debian
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9 # if Lubuntu
  
 echo "install R and some helpers"
+sudo apt-get update
 sudo apt-get install r-base r-base-dev r-cran-xml  r-cran-rjava -y
 sudo R CMD javareconf # for rJava
  
@@ -44,7 +49,7 @@ echo "install RStudio from the web"
 # use daily build to get rmarkdown & latest goodies
 # do update the URL from time to time to make sure it's fresh
 sudo apt-get update && sudo apt-get install 
-URL='https://s3.amazonaws.com/rstudio-dailybuilds/rstudio-0.98.797-amd64.deb'; FILE=`mktemp`; sudo wget "$URL" -qO $FILE && sudo dpkg -i $FILE; rm $FILE
+URL='https://s3.amazonaws.com/rstudio-dailybuilds/rstudio-0.98.862-amd64.deb'; FILE=`mktemp`; sudo wget "$URL" -qO $FILE && sudo dpkg -i $FILE; rm $FILE
  
 echo "start R and install commonly used packages"
 # http://stackoverflow.com/q/4090169/1036500
