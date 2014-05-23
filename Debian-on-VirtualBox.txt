@@ -6,7 +6,7 @@
 # then download and install Oracle VM VirtualBox: https://www.virtualbox.org/wiki/Downloads
 
 ## start VirtualBox
-# Make new VM, follow prompts, set "Type: Linux" and "Version: Debian" or if usuing Lubuntu, "Version: Ubuntu" then ok
+# Make new VM, follow prompts, set "Type: Linux" and "Version: Debian" or if using Lubuntu, "Version: Ubuntu" then ok
 # at 'select start-up disk' choose the iso to make the VM from, then if using Debian, use the Debian graphic installer
 # many fields can be left blank, try them and see, but DO be sure to select “Debian desktop environment”
 # There are many useful guides for this (stop following when you get to the desktop, don't run any of the code in these how-tos)
