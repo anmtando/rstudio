@@ -38,6 +38,7 @@ sudo apt-get install curl -y
 sudo apt-get install littler -y
 sudo apt-get install openjdk-7-* -y
 sudo apt-get install gedit -y
+sudo apt-get install mysql-server -y
 
 # also a few things in case we use python 
 # from http://faculty.washington.edu/rjl/uwhpsc-coursera/vm.html
@@ -63,7 +64,7 @@ echo "edit the sources file to prepare to install R"
 # see http://cran.r-project.org/bin/linux/ubuntu/README
 # sudo sh -c 'echo "deb http://cran.rstudio.com/bin/linux/debian wheezy-cran3/" >> /etc/apt/sources.list' # if Debian
 sudo sh -c 'echo "deb http://cran.rstudio.com/bin/linux/ubuntu trusty/" >> /etc/apt/sources.list' # if Lubuntu
-sudo sh -c 'echo "deb http://cran.rstudio.com/ raring-backports main restricted universe" >> /etc/apt/sources.list' # if Lubuntu
+# sudo sh -c 'echo "deb http://cran.rstudio.com/ raring-backports main restricted universe" >> /etc/apt/sources.list' # if Lubuntu
 
 echo "get keys to install R"
 # sudo apt-key adv --keyserver keys.gnupg.net --recv-key 381BA480 # if Debian
