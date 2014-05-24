@@ -30,7 +30,6 @@ sudo apt-get install libxml2-dev -y
 sudo apt-get install make -y
 sudo apt-get install gcc -y
 sudo apt-get install git -y
-sudo apt-get install texlive-core -y
 sudo apt-get install pandoc -y
 sudo apt-get install libjpeg62 -y
 sudo apt-get install unzip -y
@@ -40,6 +39,15 @@ sudo apt-get install openjdk-7-* -y
 sudo apt-get install gedit -y
 sudo apt-get install mysql-server -y
 sudo apt-get install libcurl4-gnutls-dev -y
+
+# for Texlive with Lubuntu
+sudo add-apt-repository ppa:texlive-backports/ppa
+sudo apt-get update
+sudo apt-get install texlive-latex-base -y
+sudo apt-get install texlive-fonts-recommended -y
+sudo apt-get install texlive-latex-extra -y
+
+
 
 
 # also a few things in case we use python 
