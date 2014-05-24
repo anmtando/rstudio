@@ -102,7 +102,7 @@ update.packages(checkBuilt = TRUE, ask = FALSE)
 }
  
 # usage
-packages <- c('codetools', 'Rcpp', 'devtools', 'knitr', 'ggplot2', 'data.table', 'dplyr', 'plyr', 'reshape2', 'XML', 'RCurl') 
+packages <- c('codetools', 'Rcpp', 'devtools', 'knitr', 'ggplot2', 'data.table', 'plyr', 'dplyr', 'reshape2', 'XML', 'RCurl') 
 # just some of my most often used ones
 ipak(packages)"
 
