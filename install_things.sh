@@ -93,7 +93,7 @@ echo "install RStudio from the web"
 # use daily build to get rmarkdown & latest goodies
 # do update the URL from time to time to make sure it's fresh
 sudo apt-get update && sudo apt-get install 
-URL='https://s3.amazonaws.com/rstudio-dailybuilds/rstudio-0.98.932-amd64.deb'; FILE=`mktemp`; sudo wget "$URL" -qO $FILE && sudo dpkg -i $FILE; rm $FILE
+URL='https://s3.amazonaws.com/rstudio-dailybuilds/rstudio-0.98.953-amd64.deb'; FILE=`mktemp`; sudo wget "$URL" -qO $FILE && sudo dpkg -i $FILE; rm $FILE
  
 echo "start R and install commonly used packages"
 # http://stackoverflow.com/q/4090169/1036500
