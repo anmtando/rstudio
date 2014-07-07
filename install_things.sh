@@ -39,6 +39,7 @@ sudo apt-get install openjdk-7-* -y
 sudo apt-get install gedit -y
 sudo apt-get install mysql-server -y
 sudo apt-get install libcurl4-gnutls-dev -y
+sudo apt-get install jags -y
 
 # for Texlive with Lubuntu
 sudo add-apt-repository ppa:texlive-backports/ppa
