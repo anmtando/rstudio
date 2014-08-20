@@ -56,12 +56,10 @@ continue, type y for yes):
   sudo apt-get update
   sudo apt-get install make gcc -y
   sudo apt-get install virtualbox-guest-x11 -y
-  sudo reboot
-  
-This last line shoud restart the program. If it 
-doesn't manually restart by clicking on the
+
+Now restart your VM by clicking on the
 little circular shutdown icon in the lower right
-corner of the window, and choose 'reboot'
+corner of the window, and choosing 'reboot'
 
 Once you're going again, look to the menu 
 bar at the top of the Oracle VM VirtualBox 
@@ -123,6 +121,8 @@ take 10+ mins, the exact time depends on
 the speed of your internet connection. Keep an eye
 on it, you'll need to enter your password here and 
 there, and press enter once or twice. 
+
+############# More detailed bits and pieces ##############
 
 ## First download a Linux distribution: 
 # Debian internet-installer image file: http://www.debian.org/distrib/netinst
