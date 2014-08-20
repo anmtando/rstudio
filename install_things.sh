@@ -40,6 +40,7 @@ sudo apt-get install gedit -y
 sudo apt-get install mysql-server -y
 sudo apt-get install libcurl4-gnutls-dev -y
 sudo apt-get install jags -y
+sudo apt-get install imagemagick -y
 
 # for Texlive with Lubuntu
 sudo add-apt-repository ppa:texlive-backports/ppa
@@ -48,28 +49,31 @@ sudo apt-get install texlive-latex-base -y
 sudo apt-get install texlive-fonts-recommended -y
 sudo apt-get install texlive-latex-extra -y
 
-
-
+# a few handy FOSS items for drawing, graphics and maps
+# sudo apt-get install inkscape
+# sudo apt-get install gimp
+# sudo apt-add-repository ppa:ubuntugis/ppa
+# sudo apt-get update
+# sudo apt-get install qgis
 
 # also a few things in case we use python 
 # from http://faculty.washington.edu/rjl/uwhpsc-coursera/vm.html
-sudo apt-get install liblzma-dev -y
-sudo apt-get install ipython -y
-sudo apt-get install ipython-notebook -y 
-sudo apt-get install python-pandas -y
-sudo apt-get install python-numpy -y
-sudo apt-get install python-scipy -y
-sudo apt-get install python-matplotlib -y
-sudo apt-get install python-dev -y
-sudo apt-get install python-sphinx -y
-sudo apt-get install gfortran -y
-sudo apt-get install openmpi-bin -y
-sudo apt-get install liblapack-dev -y
-sudo apt-get install thunar -y
-sudo apt-get install gitk -y
-sudo apt-get install docdiff -y
-sudo apt-get install imagemagick -y
-sudo apt-get install python-setuptools -y
+#sudo apt-get install liblzma-dev -y
+#sudo apt-get install ipython -y
+#sudo apt-get install ipython-notebook -y 
+#sudo apt-get install python-pandas -y
+#sudo apt-get install python-numpy -y
+#sudo apt-get install python-scipy -y
+#sudo apt-get install python-matplotlib -y
+#sudo apt-get install python-dev -y
+#sudo apt-get install python-sphinx -y
+#sudo apt-get install gfortran -y
+#sudo apt-get install openmpi-bin -y
+#sudo apt-get install liblapack-dev -y
+#sudo apt-get install thunar -y
+#sudo apt-get install gitk -y
+#sudo apt-get install docdiff -y
+#sudo apt-get install python-setuptools -y
 
 echo "edit the sources file to prepare to install R"
 # see http://cran.r-project.org/bin/linux/ubuntu/README
@@ -93,8 +97,9 @@ sudo easy_install rpy2 # now we can sudo ipython notebook & use R within: http:/
 echo "install RStudio from the web"
 # use daily build to get rmarkdown & latest goodies
 # do update the URL from time to time to make sure it's fresh
-sudo apt-get update && sudo apt-get install 
-URL='https://s3.amazonaws.com/rstudio-dailybuilds/rstudio-0.98.953-amd64.deb'; FILE=`mktemp`; sudo wget "$URL" -qO $FILE && sudo dpkg -i $FILE; rm $FILE
+sudo apt-get update -y
+sudo apt-get install -y
+URL='https://s3.amazonaws.com/rstudio-dailybuilds/rstudio-0.98.1028-amd64.deb'; FILE=`mktemp`; sudo wget "$URL" -qO $FILE && sudo dpkg -i $FILE; rm $FILE
  
 echo "start R and install commonly used packages"
 # http://stackoverflow.com/q/4090169/1036500
@@ -113,7 +118,9 @@ update.packages(checkBuilt = TRUE, ask = FALSE)
 # usage
 packages <- c('codetools', 'Rcpp', 'devtools', 'knitr', 'ggplot2', 'data.table', 'plyr', 'dplyr', 'reshape2', 'XML', 'RCurl') 
 # just some of my most often used ones
-ipak(packages)"
+ipak(packages)
+# and one from github
+devtools::install_github('rstudio/rmarkdown')"
 
 # put that R code into an R script file
 FILENAME1="loadstuff.r"

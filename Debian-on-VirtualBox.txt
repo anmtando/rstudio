@@ -1,4 +1,5 @@
-Short instructions:
+Short instructions to setup a Lubuntu Virtual Machine with
+R & RStudio:
 
 1. Download these: 
 http://lubuntu.net/ (desktop cd)
@@ -8,7 +9,9 @@ https://www.virtualbox.org/wiki/Downloads (Oracle VM VirtualBox)
 'Name' put Lubuntu, click 'Next' change memory size to 2048 MB, 
 Click 'Next', select 'create virtual drive now', click 'Next',
 select 'VDI', click 'Next', select 'Dynamically allocated', 
-click 'Next', set disk size to , click 'Create'
+click 'Next', set disk size to 8GB, click 'Create'. Feel
+free to make those values larger if you like (but don't 
+make them any smaller!). 
 
 3. At the main Oracle VM VirtualBox window, double-click on 
 'Lubuntu' the VM you just set up. You will then get a little
@@ -36,9 +39,63 @@ use (we're not using this for online banking!) and
 you'll be typing the password often. Select 'log in
 automatically' then click 'continue'. Then wait a few
 minutes and watch the 'copying files' progress bar.
+Once that's done click on 'restart' and wait for it
+to restart.
 
-5. 
+5. Now open a terminal emulator window, which you 
+can do by clicking on the blue button in the lower
+left corner, then click on 'Accessories' then click
+on 'LXTerminal'. Or you can press CTRL-ALT-t
 
+6. At the terminal prompt, type these, one line
+at a line and press enter after each line (you
+will be prompted to type your password, and after
+a bit of activity you'll be asked if you want to
+continue, type y for yes):
+
+  sudo apt-get update
+  sudo apt-get install make gcc
+  sudo apt-get install virtualbox-guest-x11
+  sudo reboot
+  
+This last line shoud restart the program. If it 
+doesn't manually restart by clicking on the
+little circular shutdown icon in the lower right
+corner of the window, and choose 'reboot'
+  
+7. Once you're going again, look to the menu 
+bar at the top of the Oracle VM VirtualBox 
+that you're working in, click on 'Devices', 
+then 'Shared clipboard', and set 
+'Shared Clipboard' to bidirectional. 
+Now you can copy and paste text to and from 
+your VM. 
+  
+8. Open a terminal again, then type
+
+ sudo firefox
+ 
+to open a web browser. Paste this URL
+into the URL box:
+
+https://gist.githubusercontent.com/benmarwick/11204658/raw/94c0828fca6e56f6cee74862ac77150d6805b733/install_things.sh
+
+After the page loads, in firefox click
+'File' then 'Save As' and name the file as
+install_things.sh in your 'Downloads' 
+folder (the default location)
+
+9. Open a second terminal and type (one line
+at a time, press enter after each line)
+
+  cd Downloads
+  bash install_things.sh
+
+and wait, watching things scroll by. This will
+take 10+ mins, the exact time depends on 
+the speed of your internet connection. Keep an eye
+on it, you'll need to enter your password here and 
+there, and press enter once or twice. 
 
 ## First download a Linux distribution: 
 # Debian internet-installer image file: http://www.debian.org/distrib/netinst
