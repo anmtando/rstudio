@@ -1,3 +1,45 @@
+Short instructions:
+
+1. Download these: 
+http://lubuntu.net/ (desktop cd)
+https://www.virtualbox.org/wiki/Downloads (Oracle VM VirtualBox)
+
+2. Install Oracle VM VirtualBox, open it, click 'New' button, at 
+'Name' put Lubuntu, click 'Next' change memory size to 2048 MB, 
+Click 'Next', select 'create virtual drive now', click 'Next',
+select 'VDI', click 'Next', select 'Dynamically allocated', 
+click 'Next', set disk size to , click 'Create'
+
+3. At the main Oracle VM VirtualBox window, double-click on 
+'Lubuntu' the VM you just set up. You will then get a little
+window that asks you to 'select start-up disk', click on the
+little folder icon to the right of the drop-down field, then
+find where you downloaded the lubuntu desktop cd. It should
+be a file that ends in iso and is about 700 MB. Once you've 
+selected that file, click 'start' on the 'select start-up disk'
+window. 
+
+4. You will then be taken to the Lubuntu install menu, 
+choose 'English' by pressing enter, then on the next
+screen 'Install Lubuntu' (use the arrow keys to select, 
+then press enter). Look in the lower right corner of the
+window to see what button you need to press to free the
+mouse (for me it's the right control key). It will take 
+a few minutes to install, keep an eye on it, you will 
+need to click 'continue', then 'download updates while
+installing', then 'continue' again, then 'erase disk 
+and install Lubuntu', then 'continue', then edit your location
+then 'continue', then 'continue again (the keyboard
+layout is usually fine), then type your name and password,
+keep it easy and simple as this is a very low security
+use (we're not using this for online banking!) and 
+you'll be typing the password often. Select 'log in
+automatically' then click 'continue'. Then wait a few
+minutes and watch the 'copying files' progress bar.
+
+5. 
+
+
 ## First download a Linux distribution: 
 # Debian internet-installer image file: http://www.debian.org/distrib/netinst
 # or
