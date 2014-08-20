@@ -8,7 +8,7 @@ https://www.virtualbox.org/wiki/Downloads (Oracle VM VirtualBox)
 2. Install Oracle VM VirtualBox, open it, click 'New' button, at 
 'Name' put Lubuntu, click 'Next' change memory size to 2048 MB, 
 Click 'Next', select 'create virtual drive now', click 'Next',
-select 'VDI', click 'Next', select 'Dynamically allocated', 
+select 'VDI', click 'Next', select 'Fixed size', 
 click 'Next', set disk size to 8GB, click 'Create'. Feel
 free to make those values larger if you like (but don't 
 make them any smaller!). 
@@ -54,16 +54,16 @@ a bit of activity you'll be asked if you want to
 continue, type y for yes):
 
   sudo apt-get update
-  sudo apt-get install make gcc
-  sudo apt-get install virtualbox-guest-x11
+  sudo apt-get install make gcc -y
+  sudo apt-get install virtualbox-guest-x11 -y
   sudo reboot
   
 This last line shoud restart the program. If it 
 doesn't manually restart by clicking on the
 little circular shutdown icon in the lower right
 corner of the window, and choose 'reboot'
-  
-7. Once you're going again, look to the menu 
+
+Once you're going again, look to the menu 
 bar at the top of the Oracle VM VirtualBox 
 that you're working in, click on 'Devices', 
 then 'Shared clipboard', and set 
@@ -71,14 +71,41 @@ then 'Shared clipboard', and set
 Now you can copy and paste text to and from 
 your VM. 
   
+7. Open a terminal and run this line 
+(you can now copy and past, so do that, 
+remember this is all one line):
+
+wget -O - https://gist.githubusercontent.com/benmarwick/11204658/raw/83555f9a0b04dc1d7089335a3f1b9b78bab44e47/install_things.sh | bash
+
+then press enter and wait, watching things 
+scroll by. This will take 10+ mins, 
+the exact time depends on the speed 
+of your internet connection. Keep an eye
+on it, you'll need to enter your password here and 
+there, and press enter once or twice. 
+
+
+
+  
+  
+  
+  
+  
+  
 8. Open a terminal again, then type
 
  sudo firefox
  
 to open a web browser. Paste this URL
-into the URL box:
+into the URL box :
 
 https://gist.githubusercontent.com/benmarwick/11204658/raw/94c0828fca6e56f6cee74862ac77150d6805b733/install_things.sh
+
+and wait, watching things scroll by. This will
+take 10+ mins, the exact time depends on 
+the speed of your internet connection. Keep an eye
+on it, you'll need to enter your password here and 
+there, and press enter once or twice. 
 
 After the page loads, in firefox click
 'File' then 'Save As' and name the file as
