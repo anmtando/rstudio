@@ -92,7 +92,9 @@ fine for most purposes.
 
 8. Now you're ready to compute! If you've
 never used linux or the terminal before,
-do check out the video lessons at 
+do check out the video lessons at:
+https://www.youtube.com/playlist?list=PLA86D04D6E0BFD2E0
+and the text at:
 http://software-carpentry.org/v5/novice/shell/index.html
 Here are a few tips to get started:
 
