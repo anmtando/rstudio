@@ -67,7 +67,7 @@ that you're working in, click on 'Devices',
 then 'Shared clipboard', and set 
 'Shared Clipboard' to bidirectional. 
 Now you can copy and paste text to and from 
-your VM. 
+your VM. Reboot the VM to enable this function.
   
 7. Open a terminal and run this line 
 (you can now copy and past, so do that, 
