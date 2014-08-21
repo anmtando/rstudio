@@ -1,6 +1,8 @@
 ############# More detailed bits and pieces ##############
 
-If archeos.eu gets things right it could replace all of this, just run that in the VM
+If archeos https://github.com/archeos/ArcheOS gets things right it could replace all of this, just run that in the VM
+
+The Berkeley Computational Enviroment http://collaboratool.berkeley.edu/ is similar but a bit heavy
 
 ## First download a Linux distribution: 
 # Debian internet-installer image file: http://www.debian.org/distrib/netinst

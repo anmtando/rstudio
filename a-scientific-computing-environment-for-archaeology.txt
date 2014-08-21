@@ -80,7 +80,7 @@ then press enter and wait, watching things
 scroll by. This step downloads a small script
 from github and runs it. The script installs
 R, RStudio, and a bunch of other things.
-This will take 10+ mins, the exact time 
+This will take 30+ mins, the exact time 
 depends on the speed of your internet 
 connection. Keep an eye on it, you'll 
 need to enter your password here and 
