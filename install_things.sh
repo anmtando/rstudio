@@ -50,11 +50,11 @@ sudo apt-get install texlive-fonts-recommended -y
 sudo apt-get install texlive-latex-extra -y
 
 # a few handy FOSS items for drawing, graphics and maps
-# sudo apt-get install inkscape
-# sudo apt-get install gimp
+# sudo apt-get install inkscape -y
+# sudo apt-get install gimp -y
 # sudo apt-add-repository ppa:ubuntugis/ppa
 # sudo apt-get update
-# sudo apt-get install qgis
+# sudo apt-get install qgis -y
 
 # also a few things in case we use python 
 # from http://faculty.washington.edu/rjl/uwhpsc-coursera/vm.html
@@ -92,7 +92,7 @@ sudo apt-get install r-base-dev -y
 sudo apt-get install r-cran-xml  -y
 sudo apt-get install r-cran-rjava -y
 sudo R CMD javareconf # for rJava
-sudo easy_install rpy2 # now we can sudo ipython notebook & use R within: http://nbviewer.ipython.org/github/ipython/ipython/blob/3607712653c66d63e0d7f13f073bde8c0f209ba8/docs/examples/notebooks/rmagic_extension.ipynb#Rmagic-Functions-Extension
+# sudo easy_install rpy2 # if using python: now we can sudo ipython notebook & use R within: http://nbviewer.ipython.org/github/ipython/ipython/blob/3607712653c66d63e0d7f13f073bde8c0f209ba8/docs/examples/notebooks/rmagic_extension.ipynb#Rmagic-Functions-Extension
  
 echo "install RStudio from the web"
 # use daily build to get rmarkdown & latest goodies
