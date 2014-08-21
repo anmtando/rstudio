@@ -39,8 +39,8 @@ use (we're not using this for online banking!) and
 you'll be typing the password often. Select 'log in
 automatically' then click 'continue'. Then wait a few
 minutes and watch the 'copying files' progress bar.
-Once that's done click on 'restart' and wait for it
-to restart.
+Once that's done click on 'reboot' and wait for it
+to restart (you may have to hit enter a few times).
 
 5. Now open a terminal emulator window, which you 
 can do by clicking on the blue button in the lower
@@ -69,8 +69,8 @@ then 'Shared clipboard', and set
 Now you can copy and paste text to and from 
 your VM. Reboot the VM to enable this function.
   
-7. Open a terminal and run these lines 
-(you can now copy and past, so do that):
+7. Open a terminal and run these three lines 
+(you can now copy and paste, so do that):
 
   wget https://gist.githubusercontent.com/benmarwick/11204658/raw/install_things.sh
   chmod +x install_things.sh
