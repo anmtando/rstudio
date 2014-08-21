@@ -37,10 +37,10 @@ sudo apt-get install curl -y
 sudo apt-get install littler -y
 sudo apt-get install openjdk-7-* -y
 sudo apt-get install gedit -y
-sudo apt-get install mysql-server -y
 sudo apt-get install libcurl4-gnutls-dev -y
 sudo apt-get install jags -y
 sudo apt-get install imagemagick -y
+# sudo apt-get install mysql-server -y
 
 # for Texlive with Lubuntu
 sudo add-apt-repository ppa:texlive-backports/ppa
