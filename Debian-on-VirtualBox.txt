@@ -69,18 +69,38 @@ then 'Shared clipboard', and set
 Now you can copy and paste text to and from 
 your VM. Reboot the VM to enable this function.
   
-7. Open a terminal and run this line 
-(you can now copy and past, so do that, 
-remember this is all one line):
+7. Open a terminal and run these lines 
+(you can now copy and past, so do that):
 
-wget -O - https://gist.githubusercontent.com/benmarwick/11204658/raw/83555f9a0b04dc1d7089335a3f1b9b78bab44e47/install_things.sh | bash
+  wget https://gist.githubusercontent.com/benmarwick/11204658/raw/install_things.sh
+  chmod +x install_things.sh
+  ./install_things.sh
 
 then press enter and wait, watching things 
-scroll by. This will take 10+ mins, 
-the exact time depends on the speed 
-of your internet connection. Keep an eye
-on it, you'll need to enter your password here and 
-there, and press enter once or twice. 
+scroll by. This step downloads a small script
+from github and runs it. The script installs
+R, RStudio, and a bunch of other things.
+This will take 10+ mins, the exact time 
+depends on the speed of your internet 
+connection. Keep an eye on it, you'll 
+need to enter your password here and 
+there, and press enter once or twice. If 
+know what you're doing you can download
+a copy of the the script and edit it to
+add or subtract items. But as it is will be
+fine for most purposes. 
+
+8. Now you're ready to compute! If you've
+never used linux or the terminal before,
+do check out the video lessons at 
+http://software-carpentry.org/v5/novice/shell/index.html
+Here are a few tips to get started:
+
+  sudo firefox # opens a web browser
+  sudo rstudio # opens rstudio
+  sudo gedit # opens a text editor
+  sudo abiword # opens a word processor
+  sudo gnumeric # opens a spreadsheet
 
 
 
@@ -89,38 +109,7 @@ there, and press enter once or twice.
   
   
   
-  
-8. Open a terminal again, then type
 
- sudo firefox
- 
-to open a web browser. Paste this URL
-into the URL box :
-
-https://gist.githubusercontent.com/benmarwick/11204658/raw/94c0828fca6e56f6cee74862ac77150d6805b733/install_things.sh
-
-and wait, watching things scroll by. This will
-take 10+ mins, the exact time depends on 
-the speed of your internet connection. Keep an eye
-on it, you'll need to enter your password here and 
-there, and press enter once or twice. 
-
-After the page loads, in firefox click
-'File' then 'Save As' and name the file as
-install_things.sh in your 'Downloads' 
-folder (the default location)
-
-9. Open a second terminal and type (one line
-at a time, press enter after each line)
-
-  cd Downloads
-  bash install_things.sh
-
-and wait, watching things scroll by. This will
-take 10+ mins, the exact time depends on 
-the speed of your internet connection. Keep an eye
-on it, you'll need to enter your password here and 
-there, and press enter once or twice. 
 
 ############# More detailed bits and pieces ##############
 
