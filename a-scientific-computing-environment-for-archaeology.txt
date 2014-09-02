@@ -10,8 +10,8 @@ https://www.virtualbox.org/wiki/Downloads (Oracle VM VirtualBox)
 Click 'Next', select 'create virtual drive now', click 'Next',
 select 'VDI', click 'Next', select 'Fixed size', 
 click 'Next', set disk size to 8GB, click 'Create'. Feel
-free to make those values larger if you like (but don't 
-make them any smaller!). 
+free to make those values larger if you like. If you can't 
+set it to 8GB, set it as large as you can.
 
 3. At the main Oracle VM VirtualBox window, double-click on 
 'Lubuntu' the VM you just set up. You will then get a little
@@ -49,8 +49,11 @@ on 'LXTerminal'. Or you can press CTRL-ALT-t
 
 6. At the terminal prompt, type these, one line
 at a line and press enter after each line (you
-will be prompted to type your password, and after
-a bit of activity you'll be asked if you want to
+will be prompted to type your password, note that
+you wont see anything on screen when you type in 
+your password, no dots or asterixes - this is
+normal). Once you've typed your password, press enter.
+After a bit of activity you'll be asked if you want to
 continue, type y for yes):
 
   sudo apt-get update

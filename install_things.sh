@@ -42,12 +42,12 @@ sudo apt-get install jags -y
 sudo apt-get install imagemagick -y
 # sudo apt-get install mysql-server -y
 
-# for Texlive with Lubuntu
-sudo add-apt-repository ppa:texlive-backports/ppa
-sudo apt-get update
-sudo apt-get install texlive-latex-base -y
-sudo apt-get install texlive-fonts-recommended -y
-sudo apt-get install texlive-latex-extra -y
+# for Texlive with Lubuntu (making PDFs)
+# sudo add-apt-repository ppa:texlive-backports/ppa
+# sudo apt-get update
+# sudo apt-get install texlive-latex-base -y
+# sudo apt-get install texlive-fonts-recommended -y
+# sudo apt-get install texlive-latex-extra -y
 
 # a few handy FOSS items for drawing, graphics and maps
 # sudo apt-get install inkscape -y
