@@ -116,7 +116,10 @@ packages <- c('codetools', 'Rcpp', 'devtools', 'knitr', 'ggplot2', 'data.table',
 # just some of my most often used ones
 ipak(packages)
 # and some from github
-devtools::install_github(c("rstudio/rmarkdown", "rstudio/packrat", "hadley/reshape"))"
+devtools::install_github("rstudio/rmarkdown")
+devtools::install_github("rstudio/packrat")
+devtools::install_github("hadley/reshape")
+" # close the R script
 
 # put that R code into an R script file
 FILENAME1="loadstuff.r"
