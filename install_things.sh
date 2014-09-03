@@ -102,23 +102,11 @@ echo "start R and install commonly used packages"
 # Make an R script file to use in a moment...
 LOADSTUFF="options(repos=structure(c(CRAN='http://cran.rstudio.com/')))
 update.packages(checkBuilt = TRUE, ask = FALSE)
-# check to see if packages are installed. 
-# Install them if they are not, then load them into the R session.
- ipak <- function(pkg){
-    new.pkg <- pkg[!(pkg %in% names(installed.packages()[,3]))]
-    if (length(new.pkg)) 
-        install.packages(new.pkg, dependencies = TRUE)
-    sapply(pkg, require, character.only = TRUE)
-}
- 
-# usage
 packages <- c('codetools', 'Rcpp', 'devtools', 'knitr', 'ggplot2', 'data.table', 'plyr', 'dplyr', 'XML', 'RCurl') 
 # just some of my most often used ones
-ipak(packages)
+install.packages(packages)
 # and some from github
-devtools::install_github("rstudio/rmarkdown")
-devtools::install_github("rstudio/packrat")
-devtools::install_github("hadley/reshape")
+devtools::install_github(c("rstudio/rmarkdown", "rstudio/packrat", "hadley/reshape"))
 " # close the R script
 
 # put that R code into an R script file
