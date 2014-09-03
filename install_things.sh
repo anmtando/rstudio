@@ -43,6 +43,7 @@ sudo apt-get install imagemagick -y
 # sudo apt-get install mysql-server -y
 
 # for Texlive with Lubuntu (making PDFs)
+# these are BIG, not recommended if you're short on disk space!
 # sudo add-apt-repository ppa:texlive-backports/ppa
 # sudo apt-get update
 # sudo apt-get install texlive-latex-base -y
@@ -77,9 +78,7 @@ sudo apt-get install imagemagick -y
 
 echo "edit the sources file to prepare to install R"
 # see http://cran.r-project.org/bin/linux/ubuntu/README
-# sudo sh -c 'echo "deb http://cran.rstudio.com/bin/linux/debian wheezy-cran3/" >> /etc/apt/sources.list' # if Debian
 sudo sh -c 'echo "deb http://cran.rstudio.com/bin/linux/ubuntu trusty/" >> /etc/apt/sources.list' # if Lubuntu
-# sudo sh -c 'echo "deb http://cran.rstudio.com/ raring-backports main restricted universe" >> /etc/apt/sources.list' # if Lubuntu
 
 echo "get keys to install R"
 # sudo apt-key adv --keyserver keys.gnupg.net --recv-key 381BA480 # if Debian
@@ -92,13 +91,10 @@ sudo apt-get install r-base-dev -y
 sudo apt-get install r-cran-xml  -y
 sudo apt-get install r-cran-rjava -y
 sudo R CMD javareconf # for rJava
-# sudo easy_install rpy2 # if using python: now we can sudo ipython notebook & use R within: http://nbviewer.ipython.org/github/ipython/ipython/blob/3607712653c66d63e0d7f13f073bde8c0f209ba8/docs/examples/notebooks/rmagic_extension.ipynb#Rmagic-Functions-Extension
- 
+
 echo "install RStudio from the web"
 # use daily build to get rmarkdown & latest goodies
 # do update the URL from time to time to make sure it's fresh
-sudo apt-get update -y
-sudo apt-get install -y
 URL='https://s3.amazonaws.com/rstudio-dailybuilds/rstudio-0.98.1028-amd64.deb'; FILE=`mktemp`; sudo wget "$URL" -qO $FILE && sudo dpkg -i $FILE; rm $FILE
  
 echo "start R and install commonly used packages"
@@ -116,11 +112,11 @@ update.packages(checkBuilt = TRUE, ask = FALSE)
 }
  
 # usage
-packages <- c('codetools', 'Rcpp', 'devtools', 'knitr', 'ggplot2', 'data.table', 'plyr', 'dplyr', 'reshape2', 'XML', 'RCurl') 
+packages <- c('codetools', 'Rcpp', 'devtools', 'knitr', 'ggplot2', 'data.table', 'plyr', 'dplyr', 'XML', 'RCurl') 
 # just some of my most often used ones
 ipak(packages)
-# and one from github
-devtools::install_github('rstudio/rmarkdown')"
+# and some from github
+devtools::install_github(c("rstudio/rmarkdown", "rstudio/packrat", "hadley/reshape"))"
 
 # put that R code into an R script file
 FILENAME1="loadstuff.r"
