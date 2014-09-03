@@ -25,6 +25,7 @@ sudo apt-get update  -y
 sudo apt-get install -y
 # sudo apt-get -f install -y
 sudo apt-get install libcurl4-gnutls-dev -y
+sudo apt-get install libcurl4-openssl-dev -y
 sudo apt-get install libopenblas-base -y
 sudo apt-get install libxml2-dev -y
 sudo apt-get install make -y
@@ -37,7 +38,6 @@ sudo apt-get install curl -y
 sudo apt-get install littler -y
 sudo apt-get install openjdk-7-* -y
 sudo apt-get install gedit -y
-sudo apt-get install libcurl4-gnutls-dev -y
 sudo apt-get install jags -y
 sudo apt-get install imagemagick -y
 # sudo apt-get install mysql-server -y
