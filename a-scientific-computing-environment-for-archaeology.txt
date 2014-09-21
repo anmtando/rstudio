@@ -39,8 +39,14 @@ use (we're not using this for online banking!) and
 you'll be typing the password often. Select 'log in
 automatically' then click 'continue'. Then wait a few
 minutes and watch the 'copying files' progress bar.
-Once that's done click on 'reboot' and wait for it
-to restart (you may have to hit enter a few times).
+Once that's done, it will probably want to restart,
+click to accept a restart (you may have to hit enter 
+a few times to move the process along), or if you 
+don't get the option, click on the
+little circular shutdown icon in the lower right
+corner of the window, and choose 'reboot', and wait
+for it to restart (hitting enter a few times if
+it looks like it's stopped doing things).
 
 5. Now open a terminal emulator window, which you 
 can do by clicking on the blue button in the lower
@@ -48,24 +54,28 @@ left corner, then click on 'Accessories' then click
 on 'LXTerminal'. Or you can press CTRL-ALT-t
 
 6. At the terminal prompt, type these, one line
-at a line and press enter after each line (you
-will be prompted to type your password, note that
-you wont see anything on screen when you type in 
+at a time, exactly as printed here, and press 
+enter after each line (you will be prompted to 
+type your password, note that you wont see 
+anything on screen when you type in 
 your password, no dots or asterixes - this is
-normal). Once you've typed your password, press enter.
-After a bit of activity you'll be asked if you want to
-continue, type y for yes):
+normal). Once you've typed your password, press
+enter. Here are the lines to type in:
 
   sudo apt-get update
   sudo apt-get install virtualbox-guest-x11 -y
 
-Now restart your VM by clicking on the
-little circular shutdown icon in the lower right
-corner of the window, and choosing 'reboot'
+Wait for things to scroll past in the console,
+it will take a few minutes. When you get your
+prompt back (ie stuff stops scrolling by and 
+the console is ready for a new command), restart 
+your VM by clicking on the little circular 
+shutdown icon in the lower right corner of 
+the window, and choosing 'reboot'
 
 Once you're going again, look to the menu 
 bar at the top of the Oracle VM VirtualBox 
-that you're working in, click on 'Devices', 
+window that you're working in, click on 'Devices', 
 then 'Shared clipboard', and set 
 'Shared Clipboard' to bidirectional. 
 Now you can copy and paste text to and from 
