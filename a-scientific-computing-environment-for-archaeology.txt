@@ -80,6 +80,32 @@ then 'Shared clipboard', and set
 'Shared Clipboard' to bidirectional. 
 Now you can copy and paste text to and from 
 your VM.
+
+Go back to the 'Devices' menu you were just at
+and click on 'Shared folder settings...' then 
+click on 'Machine Folders', then click on the
+little button that is a picture of a folder
+with a plus sign, that will make a little box
+appear. In this box, click on the little down 
+arrow at the right of the 'Folder Path' field,
+then click on 'Other...' and choose a folder 
+on your computer that contains files you want 
+to work with in your VM. Check the boxes for 
+'auto-mount' and 'make permanent', then click
+OK, and click OK again. In your VM, open a terminal
+and type:
+
+sudo usermod -aG vboxsf MYUSERNAME
+
+Where MYUSERNAME is the username you set up for
+yourself when you made the VM. Enter your password
+when prompted, then reboot the VM again. This will
+give you access to the folder on your computer
+from the VM, so you can easily transfer files between
+the two environments. The shared folder can be 
+found on the VM in a directory called 'media',
+which you can access by typing /media in the 
+file manager address bar. 
   
 7. Open a terminal and run these three lines 
 (you can now copy and paste, so do that):
@@ -97,9 +123,8 @@ depends on the speed of your internet
 connection. Keep an eye on it, you'll 
 need to enter your password here and 
 there, and press enter once or twice. If 
-know what you're doing you can download
-a copy of the the script and edit it to
-add or subtract items. But as it is will be
+know what you're doing you can edit the script
+to add or subtract items. But as it is will be
 fine for most purposes. 
 
 8. Now you're ready to compute! If you've
