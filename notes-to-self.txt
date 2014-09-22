@@ -96,3 +96,7 @@ RUN Rscript -e 'source("http://bioconductor.org/biocLite.R"); biocLite("rhdf5", 
 RUN Rscript -e 'devtools::install_github(c("rstudio/rmarkdown", "rstudio/packrat", "hadley/bigrquery", "hadley/reshape"))'
 RUN Rscript -e 'install.packages(c("SSOAP", "XMLSchema", "Sxslt"), repo="http://www.omegahat.org/R", type="source")'
 RUN Rscript -e 'devtools::install_github("egonw/rrdf", subdir="rrdflibs", build_vignettes=FALSE); devtools::install_github("egonw/rrdf", subdir="rrdf", build_vignettes=FALSE)'
+
+###
+ubuntu mini, https://help.ubuntu.com/community/Installation/MinimalCD
+http://ask.xmodulo.com/install-minimal-ubuntu-desktop.html
