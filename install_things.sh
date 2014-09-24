@@ -101,7 +101,7 @@ echo "start R and install commonly used packages"
 # Make an R script file to use in a moment...
 LOADSTUFF="options(repos=structure(c(CRAN='http://cran.rstudio.com/')))
 update.packages(checkBuilt = TRUE, ask = FALSE)
-packages <- c('codetools', 'Rcpp', 'devtools', 'knitr', 'ggplot2', 'data.table', 'plyr', 'dplyr', 'XML', 'RCurl', 'gdata') 
+packages <- c('codetools', 'Rcpp', 'devtools', 'knitr', 'ggplot2', 'data.table', 'plyr', 'dplyr', 'XML', 'RCurl', 'gdata', 'xtable') 
 # just some of my most often used ones
 install.packages(packages)
 # and some from github
