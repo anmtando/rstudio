@@ -6,7 +6,7 @@ http://lubuntu.net/ (desktop cd)
 https://www.virtualbox.org/wiki/Downloads (Oracle VM VirtualBox)
 
 2. Install Oracle VM VirtualBox, open it, click 'New' button, at 
-'Name' put Lubuntu, click 'Next' change memory size to 512 MB (or 
+'Name' put Lubuntu, click 'Next' change memory size to 2048 MB (or 
 more, but as a rule of thumb not more than a quarter of your total 
 RAM), Click 'Next', select 'create virtual drive now', click 'Next',
 select 'VDI', click 'Next', select 'Fixed size', 
