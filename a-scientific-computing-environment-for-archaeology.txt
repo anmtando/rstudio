@@ -12,7 +12,7 @@ RAM), Click 'Next', select 'create virtual drive now', click 'Next',
 select 'VDI', click 'Next', select 'Fixed size', 
 click 'Next', set disk size to 8GB, click 'Create'. Feel
 free to make those values larger if you like. If you can't 
-set it to 8GB, set it as large as you can.
+set it to 8GB, set it as large as you can. 
 
 3. At the main Oracle VM VirtualBox window, double-click on 
 'Lubuntu' the VM you just set up. You will then get a little
@@ -21,7 +21,10 @@ little folder icon to the right of the drop-down field, then
 find where you downloaded the lubuntu desktop cd. It should
 be a file that ends in iso and is about 700 MB. Once you've 
 selected that file, click 'start' on the 'select start-up disk'
-window. 
+window. If you get an error, try turning off your antivirus
+software, if that doesn't help, uninstall VirtualBox and 
+download and install a new copy of VirtualBox
+from here: https://www.virtualbox.org/wiki/Testbuilds
 
 4. You will then be taken to the Lubuntu install menu, 
 choose 'English' by pressing enter, then on the next
