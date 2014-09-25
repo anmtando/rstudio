@@ -7,9 +7,10 @@ https://www.virtualbox.org/wiki/Downloads (Oracle VM VirtualBox)
 
 2. Install Oracle VM VirtualBox, open it (if using windows,
 run as administrator), click 'New' button, at 
-'Name' put Lubuntu, click 'Next' change memory size to 2048 MB (or 
-more, but as a rule of thumb not more than a quarter of your total 
-RAM), Click 'Next', select 'create virtual drive now', click 'Next',
+'Name' put Lubuntu, click 'Next' change memory size 
+to 2048 MB (or more, but as a rule of thumb not more 
+than a quarter of your total RAM), Click 'Next', select 
+'create virtual drive now', click 'Next',
 select 'VDI', click 'Next', select 'Fixed size', 
 click 'Next', set disk size to 8GB, click 'Create'. Feel
 free to make those values larger if you like. If you can't 
@@ -94,4 +95,56 @@ click on 'Machine Folders', then click on the
 little button that is a picture of a folder
 with a plus sign, that will make a little box
 appear. In this box, click on the little down 
-arrow at the 
+arrow at the right of the 'Folder Path' field,
+then click on 'Other...' and choose a folder 
+on your computer that contains files you want 
+to work with in your VM. Check the boxes for 
+'auto-mount' and 'make permanent', then click
+OK, and click OK again. In your VM, open a terminal
+and type:
+ 
+sudo usermod -aG vboxsf MYUSERNAME
+ 
+Where MYUSERNAME is the username you set up for
+yourself when you made the VM. Enter your password
+when prompted, then reboot the VM again. This will
+give you access to the folder on your computer
+from the VM, so you can easily transfer files between
+the two environments. The shared folder can be 
+found on the VM in a directory called 'media',
+which you can access by typing /media in the 
+file manager address bar. 
+  
+7. Open a terminal and run these three lines 
+(you can now copy and paste, so do that):
+ 
+  wget https://gist.githubusercontent.com/benmarwick/11204658/raw/install_things.sh
+  chmod +x install_things.sh
+  ./install_things.sh
+ 
+then press enter and wait, watching things 
+scroll by. This step downloads a small script
+from github and runs it. The script installs
+R, RStudio, and a bunch of other things.
+This will take 30+ mins, the exact time 
+depends on the speed of your internet 
+connection. Keep an eye on it, you'll 
+need to enter your password here and 
+there, and press enter once or twice. If 
+know what you're doing you can edit the script
+to add or subtract items. But as it is will be
+fine for most purposes. 
+ 
+8. Now you're ready to compute! If you've
+never used linux or the terminal before,
+do check out the video lessons at:
+https://www.youtube.com/playlist?list=PLA86D04D6E0BFD2E0
+and the text at:
+http://software-carpentry.org/v5/novice/shell/index.html
+Here are a few tips to get started:
+ 
+  sudo firefox # opens a web browser
+  sudo rstudio # opens rstudio
+  sudo gedit # opens a text editor
+  sudo abiword # opens a word processor
+  sudo gnumeric # opens a spreadsheet
