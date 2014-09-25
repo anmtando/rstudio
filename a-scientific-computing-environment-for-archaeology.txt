@@ -81,10 +81,9 @@ type this at the terminal:
 
   sudo reboot
 
-Once you're going again, look to the menu 
-bar at the top of the Oracle VM VirtualBox 
-window that you're working in, click on 'Devices', 
-then 'Shared clipboard', and set 
+Once you're going again, look to the main 
+Oracle VM VirtualBox menu bar, click on 
+'Devices', then 'Shared clipboard', and set 
 'Shared Clipboard' to bidirectional. 
 Now you can copy and paste text to and from 
 your VM.
