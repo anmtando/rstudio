@@ -94,8 +94,11 @@ sudo R CMD javareconf # for rJava
 echo "install RStudio from the web"
 # use daily build to get rmarkdown & latest goodies
 # do update the URL from time to time to make sure it's fresh
-URL='https://s3.amazonaws.com/rstudio-dailybuilds/rstudio-0.98.1028-amd64.deb'; FILE=`mktemp`; sudo wget "$URL" -qO $FILE && sudo dpkg -i $FILE; rm $FILE
- 
+# URL='https://s3.amazonaws.com/rstudio-dailybuilds/rstudio-0.98.1062-amd64.deb'; FILE=`mktemp`; sudo wget "$URL" -qO $FILE && sudo dpkg -i $FILE; rm $FILE # 64-bit
+URL='https://s3.amazonaws.com/rstudio-dailybuilds/rstudio-0.98.1062-i386.deb'; FILE=`mktemp`; sudo wget "$URL" -qO $FILE && sudo dpkg -i $FILE; rm $FILE # 32-bit, more common with students
+
+rstudio-0.98.1062-i386.deb
+
 echo "start R and install commonly used packages"
 # http://stackoverflow.com/q/4090169/1036500
 # Make an R script file to use in a moment...
