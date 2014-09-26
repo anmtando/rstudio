@@ -93,17 +93,24 @@ sudo R CMD javareconf # for rJava
 
 echo "install RStudio from the web"
 # use daily build to get rmarkdown & latest goodies
-# do update the URL from time to time to make sure it's fresh
+# http://stackoverflow.com/a/15046782/1036500
 # check if 32 or 64 bit and install appropriate version... 
 # http://stackoverflow.com/a/106416/1036500
 
 MACHINE_TYPE=`uname -m`
 if [ ${MACHINE_TYPE} == 'x86_64' ]; then
   # 64-bit stuff here
-URL='https://s3.amazonaws.com/rstudio-dailybuilds/rstudio-0.98.1028-amd64.deb'; FILE=`mktemp`; sudo wget "$URL" -qO $FILE && sudo dpkg -i $FILE; rm $FILE
+
+URL=$(wget -q -O -  http://www.rstudio.org/download/daily/desktop/ubuntu64 | grep -o -m 1 "https[^\']*" )
+
+FILE=`mktemp`; sudo wget "$URL" -qO $FILE && sudo dpkg -i $FILE; rm $FILE
+
 else
   # 32-bit stuff here
-URL='https://s3.amazonaws.com/rstudio-dailybuilds/rstudio-0.98.1028-i386.deb'; FILE=`mktemp`; sudo wget "$URL" -qO $FILE && sudo dpkg -i $FILE; rm $FILE
+
+URL=$(wget -q -O -  http://www.rstudio.org/download/daily/desktop/ubuntu32 | grep -o -m 1 "https[^\']*" )
+
+FILE=`mktemp`; sudo wget "$URL" -qO $FILE && sudo dpkg -i $FILE; rm $FILE
 fi
 
 
