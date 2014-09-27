@@ -2,12 +2,13 @@ Short instructions to setup a Lubuntu Virtual Machine with
 R & RStudio:
 
 1. Download these: 
-http://lubuntu.net/ (desktop cd)
+http://lubuntu.net/ (Intel x86 desktop cd)
 https://www.virtualbox.org/wiki/Downloads (Oracle VM VirtualBox)
 
 2. Install Oracle VM VirtualBox, open it (if using windows,
 run as administrator), click 'New' button, at 
-'Name' put Lubuntu, click 'Next' change memory size 
+'Name' put Lubuntu, 'Type' choose Linux, 'Version' choose
+Ubuntu (32-bit), then click 'Next' and change memory size 
 to 2048 MB (or more, but as a rule of thumb not more 
 than a quarter of your total RAM), Click 'Next', select 
 'create virtual drive now', click 'Next',
