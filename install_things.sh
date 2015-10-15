@@ -119,11 +119,11 @@ echo "start R and install commonly used packages"
 # Make an R script file to use in a moment...
 LOADSTUFF="options(repos=structure(c(CRAN='http://cran.rstudio.com/')))
 update.packages(checkBuilt = TRUE, ask = FALSE)
-packages <- c('codetools', 'Rcpp', 'devtools', 'knitr', 'ggplot2', 'data.table', 'plyr', 'dplyr', 'XML', 'RCurl', 'gdata', 'stargazer') 
+packages <- c('codetools', 'Rcpp', 'devtools', 'knitr', 'ggplot2',  'plyr', 'dplyr', 'XML', 'RCurl', 'readxl', 'tidyr') 
 # just some of my most often used ones
 install.packages(packages)
 # and some from github
-devtools::install_git(c('https://github.com/rstudio/rmarkdown.git', 'https://github.com/rstudio/packrat', 'https://github.com/hadley/reshape'))" # close the R script
+devtools::install_git(c('https://github.com/rstudio/rmarkdown.git',  'https://github.com/hadley/reshape'))" # close the R script
 
 # put that R code into an R script file
 FILENAME1="loadstuff.r"
