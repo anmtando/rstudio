@@ -121,7 +121,7 @@ file manager address bar.
  
   wget https://gist.githubusercontent.com/benmarwick/11204658/raw/install_things.sh
   chmod +x install_things.sh
-  ./install_things.sh
+  sudo ./install_things.sh
  
 then press enter and wait, watching things 
 scroll by. This step downloads a small script
