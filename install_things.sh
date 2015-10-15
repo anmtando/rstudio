@@ -25,6 +25,7 @@ sudo apt-get update  -y
 sudo apt-get install -y
 # sudo apt-get -f install -y
 sudo apt-get install libcurl4-openssl-dev -y
+sudo apt-get install libssl-dev -y
 sudo apt-get install libopenblas-base -y
 sudo apt-get install libxml2-dev -y
 sudo apt-get install make -y
