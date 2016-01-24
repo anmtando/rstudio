@@ -22,8 +22,8 @@
 echo "install a few dependancies for our workflow"
 sudo apt-get update  -y
 # sudo apt-get upgrade  -y
-sudo apt-get install -y
-# sudo apt-get -f install -y
+sudo apt-get install libgstreamer0.10-0 -y
+sudo apt-get install libgstreamer-plugins-base0.10-dev -y
 sudo apt-get install libcurl4-openssl-dev -y
 sudo apt-get install libssl-dev -y
 sudo apt-get install libopenblas-base -y
