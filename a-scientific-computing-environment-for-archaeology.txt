@@ -70,6 +70,8 @@ normal). Once you've typed your password, press
 enter. Here are the lines to type in:
 
   sudo apt-get update
+  sudo apt-get install build-essential module-assistant -y
+  sudo m-a prepare
   sudo apt-get install virtualbox-guest-x11 -y
 
 Wait for things to scroll past in the console,
