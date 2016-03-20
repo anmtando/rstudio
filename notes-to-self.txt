@@ -59,6 +59,10 @@ file -> export appliance
 # in:  su -
 # out: su yourusername
 
+# Docker 
+# this seems to be important to set variables and make Docker work on windows
+# eval "$(docker-machine.exe env docker)"
+
 # To do:
 
 # add right-click or keyboard shortcut to 'open terminal'  cf. http://askubuntu.com/a/207448/119774 http://www.cyberciti.biz/faq/linux-gnome-open-terminal-shell-prompt-here/
