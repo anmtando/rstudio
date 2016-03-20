@@ -40,7 +40,7 @@ sudo apt-get install openjdk-7-* -y
 sudo apt-get install gedit -y
 sudo apt-get install jags -y
 sudo apt-get install imagemagick -y
-sudo apt-get install docker.io -y
+sudo apt-get install docker-engine -y
 # sudo apt-get install mysql-server -y
 
 # for Texlive with Lubuntu (making PDFs)
