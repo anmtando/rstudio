@@ -108,14 +108,14 @@ if [ ${MACHINE_TYPE} == 'x86_64' ]; then
 
 URL=$(wget -q -O -  http://www.rstudio.org/download/daily/desktop/ubuntu64 | grep -o -m 1 "https[^\']*" )
 
-FILE=`mktemp`; sudo wget "$URL" -qO $FILE && sudo gdebi $FILE; rm $FILE
+FILE=`mktemp`; sudo wget "$URL" -qO $FILE && sudo gdebi $FILE -y; rm $FILE
 
 else
   # 32-bit stuff here
 
 URL=$(wget -q -O -  http://www.rstudio.org/download/daily/desktop/ubuntu32 | grep -o -m 1 "https[^\']*" )
 
-FILE=`mktemp`; sudo wget "$URL" -qO $FILE && sudo gdebi $FILE; rm $FILE
+FILE=`mktemp`; sudo wget "$URL" -qO $FILE && sudo gdebi $FILE -y; rm $FILE
 fi
 
 
