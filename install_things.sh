@@ -101,7 +101,16 @@ echo "install RStudio from the web"
 # http://stackoverflow.com/a/106416/1036500
 
  echo "deb http://httpredir.debian.org/debian jessie main" | sudo tee -a /etc/apt/sources.list
- sudo apt-get install libgstreamer0.10-0 libgstreamer-plugins-base0.10-0
+ echo 
+ "Package: *
+Pin: release o=Debian,a=unstable
+Pin-Priority: 600
+
+Package: *
+Pin: release o=Debian,n=jessie
+Pin-Priority: 10"  | sudo tee -a /etc/apt/preferences.d/01_release
+
+sudo apt-get install libgstreamer0.10-0 libgstreamer-plugins-base0.10-0
 
 MACHINE_TYPE=`uname -m`
 if [ ${MACHINE_TYPE} == 'x86_64' ]; then
