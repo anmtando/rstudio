@@ -41,6 +41,7 @@ sudo apt-get install gedit -y
 sudo apt-get install jags -y
 sudo apt-get install imagemagick -y
 sudo apt-get install docker-engine -y
+sudo apt-get install gdebi-core
 # sudo apt-get install mysql-server -y
 
 # for Texlive with Lubuntu (making PDFs)
@@ -105,14 +106,14 @@ if [ ${MACHINE_TYPE} == 'x86_64' ]; then
 
 URL=$(wget -q -O -  http://www.rstudio.org/download/daily/desktop/ubuntu64 | grep -o -m 1 "https[^\']*" )
 
-FILE=`mktemp`; sudo wget "$URL" -qO $FILE && sudo dpkg -i $FILE; rm $FILE
+FILE=`mktemp`; sudo wget "$URL" -qO $FILE && sudo gdebi $FILE; rm $FILE
 
 else
   # 32-bit stuff here
 
 URL=$(wget -q -O -  http://www.rstudio.org/download/daily/desktop/ubuntu32 | grep -o -m 1 "https[^\']*" )
 
-FILE=`mktemp`; sudo wget "$URL" -qO $FILE && sudo dpkg -i $FILE; rm $FILE
+FILE=`mktemp`; sudo wget "$URL" -qO $FILE && sudo gdebi $FILE; rm $FILE
 fi
 
 
