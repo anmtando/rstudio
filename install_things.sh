@@ -100,17 +100,7 @@ echo "install RStudio from the web"
 # check if 32 or 64 bit and install appropriate version... 
 # http://stackoverflow.com/a/106416/1036500
 
- echo "deb http://httpredir.debian.org/debian jessie main" | sudo tee -a /etc/apt/sources.list
- echo 
- "Package: *
-Pin: release o=Debian,a=unstable
-Pin-Priority: 600
-
-Package: *
-Pin: release o=Debian,n=jessie
-Pin-Priority: 10"  | sudo tee -a /etc/apt/preferences.d/01_release
-
-sudo apt-get install libgstreamer0.10-0 libgstreamer-plugins-base0.10-0
+# currently these steps are needed to get RStudio installed https://stackoverflow.com/a/38646838/1036500
 
 MACHINE_TYPE=`uname -m`
 if [ ${MACHINE_TYPE} == 'x86_64' ]; then
