@@ -104,3 +104,6 @@ RUN Rscript -e 'devtools::install_github("egonw/rrdf", subdir="rrdflibs", build_
 ###
 ubuntu mini, https://help.ubuntu.com/community/Installation/MinimalCD
 http://ask.xmodulo.com/install-minimal-ubuntu-desktop.html
+
+## if buggy, get the pre-built VM from 
+http://www.osboxes.org/lubuntu/
