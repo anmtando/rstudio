@@ -80,7 +80,7 @@ sudo apt-get install gdebi-core
 
 echo "edit the sources file to prepare to install R"
 # see http://cran.r-project.org/bin/linux/ubuntu/README
-sudo sh -c 'echo "deb http://cran.rstudio.com/bin/linux/ubuntu xenial/" >> /etc/apt/sources.list' # if Lubuntu
+sudo sh -c 'echo "deb http://cran.rstudio.com/bin/linux/ubuntu yakkety/" >> /etc/apt/sources.list' # if Lubuntu
 
 echo "get keys to install R"
 # sudo apt-key adv --keyserver keys.gnupg.net --recv-key 381BA480 # if Debian
