@@ -25,7 +25,7 @@ sudo apt-get update  -y
 sudo apt-get install libgstreamer0.10-0 -y
 sudo apt-get install libgstreamer-plugins-base0.10-dev -y
 sudo apt-get install libcurl4-openssl-dev -y
-sudo apt-get install libssl-dev -y
+sudo apt-get install libssl-dev libssh2-1-dev  -y
 sudo apt-get install libopenblas-base -y
 sudo apt-get install libxml2-dev -y
 sudo apt-get install make -y
