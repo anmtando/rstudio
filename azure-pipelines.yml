@@ -1,1 +1,79 @@
 
+pool:
+  name: Azure Pipelines
+variables:
+  PG_HOST: 'haskell-db.postgres.database.azure.com'
+  PG_PORT: '5432'
+  PG_USER: 'haskelldb@haskell-db'
+  PG_PASSWORD: 'Source@123'
+  PG_DATABASE: 'postgres'
+  ENVT: 'DEV'
+  AAD_IM: 'https://login.microsoftonline.com/SourcefuseTech.onmicrosoft.com/v2.0/.well-known/openid-configuration'
+  AAD_ACI: 'e374773f-beed-4eb0-898a-13e9b9346a7e'
+  AAD_RU: 'https://haskellapidev.azurewebsites.net/auth/azure-ad-redirect'
+  AAD_AC: 'Fn6kAJvB9p@DHpyh/f8e7WaZJa_]skr_'
+  ISSUER: 'nest_api'
+  SECRET: 'qwerty'
+  RD_HOST: 'haskell.redis.cache.windows.net'
+  RD_PORT: '6379'
+  RD_PASSWORD: 'l+1zZtUxA7wR9gws1UsnemtXxKjdNtpzmTJql1X7eYc='
+  YAMMER_AU: 'https://www.yammer.com/api/v1'
+  NOTIFICATION_SU: 'https://app-haskellapp-dev-002.azurewebsites.net/'
+  AZURE_STORAGE_SAS_KEY_ARG: '?sv=2019-02-02&ss=bfqt&srt=sco&sp=rwdlacup&se=2022-09-30T20:58:19Z&st=2020-03-18T12:58:19Z&spr=https&sig=w4RuvnLDR%2Fw98fde%2BWddTDQ05cpK6i5JesTcppQ8seM%3D'
+  AZURE_STORAGE_ACCOUNT_ARG: 'storagehaskell'
+  AZURE_STORAGE_CONTAINER_ARG: 'sthaskellappdev001'
+
+steps:
+- bash: |
+   # Write your commands here
+   
+   echo 'Hello world'
+   mv .env.example .env
+   cat .env
+   #echo $POSTGRES_HOST
+   echo $PG_HOST
+   
+  displayName: 'Bash Script'
+  enabled: false
+
+- task: Docker@0
+  displayName: 'Build an image'
+  inputs:
+    azureSubscription: 'Pay-As-You-Go (7897bc88-474a-4b3f-8178-cc8a24f8d833)'
+    azureContainerRegistry: '{"loginServer":"haskellregistry.azurecr.io", "id" : "/subscriptions/7897bc88-474a-4b3f-8178-cc8a24f8d833/resourceGroups/sf-rg-haskell/providers/Microsoft.ContainerRegistry/registries/haskellregistry"}'
+    dockerFile: Dockerfile
+    buildArguments: |
+     PG_HOST=$(PG_HOST)
+     PG_PORT=$(PG_PORT)
+     PG_USER=$(PG_USER)
+     PG_PASSWORD=$(PG_PASSWORD)
+     PG_DATABASE=$(PG_DATABASE)
+     ENVT=$(ENVT)
+     AAD_IM=$(AAD_IM)
+     AAD_ACI=$(AAD_ACI)
+     AAD_RU=$(AAD_RU)
+     AAD_AC=$(AAD_AC)
+     ISSUER=$(ISSUER)
+     SECRET=$(SECRET)
+     RD_HOST=$(RD_HOST)
+     RD_PORT=$(RD_PORT)
+     RD_PASSWORD=$(RD_PASSWORD)
+     YAMMER_AU=$(YAMMER_AU)
+     NOTIFICATION_SU=$(NOTIFICATION_SU)
+     AZURE_STORAGE_SAS_KEY_ARG=$(AZURE_STORAGE_SAS_KEY_ARG)
+     AZURE_STORAGE_ACCOUNT_ARG=$(AZURE_STORAGE_ACCOUNT_ARG)
+     AZURE_STORAGE_CONTAINER_ARG=$(AZURE_STORAGE_CONTAINER_ARG)
+    defaultContext: false
+    context: .
+    imageName: 'docker-image-nest'
+    includeLatestTag: true
+
+- task: Docker@0
+  displayName: 'Push an image'
+  inputs:
+    azureSubscription: 'Pay-As-You-Go (7897bc88-474a-4b3f-8178-cc8a24f8d833)'
+    azureContainerRegistry: '{"loginServer":"haskellregistry.azurecr.io", "id" : "/subscriptions/7897bc88-474a-4b3f-8178-cc8a24f8d833/resourceGroups/sf-rg-haskell/providers/Microsoft.ContainerRegistry/registries/haskellregistry"}'
+    action: 'Push an image'
+    imageName: 'docker-image-nest'
+    includeLatestTag: true
+
